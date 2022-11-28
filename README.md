@@ -35,7 +35,7 @@ To remove a book from the list:
 
 ## Authors
 
-👤 **Wali Muhamad**
+👤 **Juan Carlos Sanchez**
 
 - GitHub: @Itswali
 - Twitter: @Wali-Muhammad
