@@ -5,13 +5,6 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 let removeButtons = document.querySelectorAll('.btn-remove');
 
-const removeBook = (e) => {
-    const titleToRemove = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
-    books = books.filter((book) => book.title !== titleToRemove);
-    showList();
-    localStorage.setItem('books', JSON.stringify(books));
-  };
-
 function showList() {
   let listHtml = '';
   for (let i = 0; i < books.length; i += 1) {
@@ -33,6 +26,13 @@ const addBook = () => {
     author: author.value,
   };
   books.push(newBook);
+  showList();
+  localStorage.setItem('books', JSON.stringify(books));
+};
+
+const removeBook = (e) => {
+  const titleToRemove = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
+  books = books.filter((book) => book.title !== titleToRemove);
   showList();
   localStorage.setItem('books', JSON.stringify(books));
 };
