@@ -5,6 +5,9 @@ const title = document.getElementById('title');
 const author = document.getElementById('author');
 let removeButtons = document.querySelectorAll('.btn-remove');
 
+/*
+render list
+*/
 function showList() {
   let listHtml = '';
   for (let i = 0; i < books.length; i += 1) {
