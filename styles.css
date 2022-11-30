@@ -93,8 +93,18 @@ body {
 }
 
 .contact {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
+.list-section {
+  display: block;
+}
+
+#add-sec {
+  display: none;
+}
+
+
