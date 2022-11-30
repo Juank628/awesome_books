@@ -11,7 +11,7 @@ class UI {
     for (let i = 0; i < books.length; i += 1) {
       listHtml += `
           <div class="book-row" id="book-${i}">
-            <p>${books[i].title}</p> by <p>${books[i].author}</p>
+            <p class="title">${books[i].title}</p> by <p class="author">${books[i].author}</p>
             <button id="btn-book-${i}" data-index=${i} class="btn-remove">Remove</button> 
             <hr>
           </div>`;
@@ -45,6 +45,6 @@ class UI {
   };
 }
 
-let objUI = new UI()
+const objUI = new UI();
 addButton.addEventListener('click', objUI.addBook);
 objUI.showList();

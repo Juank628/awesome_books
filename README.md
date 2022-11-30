@@ -37,9 +37,9 @@ To remove a book from the list:
 
 👤 **Juan Carlos Sanchez**
 
-- GitHub: @Itswali
-- Twitter: @Wali-Muhammad
-- LinkedIn: @wali-Muhammad
+- GitHub: [@Juank628](https://github.com/Juank628)
+- Twitter: [@juancadev81](https://twitter.com/juancadev81)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/juan-carlos-sanchez-zunino-271b5151)
 
 👤 **Ivan Martinez von Halle**
 
