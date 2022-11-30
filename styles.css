@@ -67,3 +67,34 @@ body {
 .author {
   margin-left: 2ch;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: end;
+  padding: 10px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-link {
+  cursor: pointer;
+}
+
+.footer-container {
+  padding: 20px;
+  border: 1px solid black;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
