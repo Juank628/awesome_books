@@ -46,6 +46,7 @@ class UI {
   }
 
   addBook = () => {
+    if (title.value.length > 0 && author.value.length > 0) {
     const newBook = {
       title: title.value,
       author: author.value,
@@ -55,7 +56,8 @@ class UI {
     author.value = '';
     this.showList();
     localStorage.setItem('books', JSON.stringify(books));
-  };
+    }
+};
 
   removeBook = (e) => {
     const titleToRemove = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
