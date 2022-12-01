@@ -31,7 +31,7 @@ contactshow.addEventListener('click', () => {
 });
 
 class UI {
-  showList() {
+  showList = () => {
     let listHtml = '';
     for (let i = 0; i < books.length; i += 1) {
       listHtml += `
@@ -67,7 +67,7 @@ class UI {
     localStorage.setItem('books', JSON.stringify(books));
   };
 
-  removeBook = (e)  => { 
+  removeBook = (e) => { 
     if (!e.target.matches('.btn-remove')) return;
     const { index } = e.target.dataset;
     books.splice(index, 1);
