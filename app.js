@@ -42,7 +42,6 @@ class UI {
           </div>`;
     }
     listSection.innerHTML = listHtml;
-    /* this.addRevomeEvents();  eslint-disable-line */
   }
 
   addBook = () => {
@@ -59,27 +58,12 @@ class UI {
     }
   };
 
-  removeBook1 = (e) => {
-    const titleToRemove = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
-    const authorToRemove = e.currentTarget.previousElementSibling.textContent;
-    books = books.filter((book) => book.title !== titleToRemove || book.author !== authorToRemove);
-    this.showList();
-    localStorage.setItem('books', JSON.stringify(books));
-  };
-
-  removeBook = (e) => {
+    removeBook = (e) => {
     if (!e.target.matches('.btn-remove')) return;
     const { index } = e.target.dataset;
     books.splice(index, 1);
     this.showList();
     localStorage.setItem('books', JSON.stringify(books));
-  };
-
-  addRevomeEvents = () => {
-    removeButtons = document.querySelectorAll('.btn-remove');
-    removeButtons.forEach((button) => {
-      button.addEventListener('click', (e) => this.removeBook(e));
-    });
   };
 }
 
