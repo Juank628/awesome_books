@@ -1,9 +1,8 @@
-let books = JSON.parse(localStorage.getItem('books')) || [];
+const books = JSON.parse(localStorage.getItem('books')) || [];
 const listSection = document.getElementById('list-sec');
 const addButton = document.getElementById('btn-add');
 const title = document.getElementById('title');
 const author = document.getElementById('author');
-let removeButtons = document.querySelectorAll('.btn-remove');
 
 const showlist = document.getElementById('listshow');
 const addshow = document.getElementById('addshow');
@@ -58,7 +57,7 @@ class UI {
     }
   };
 
-    removeBook = (e) => {
+  removeBook = (e) => {
     if (!e.target.matches('.btn-remove')) return;
     const { index } = e.target.dataset;
     books.splice(index, 1);
