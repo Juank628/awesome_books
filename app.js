@@ -67,7 +67,7 @@ class UI {
     localStorage.setItem('books', JSON.stringify(books));
   };
 
-  removeBook = (e) => { 
+  removeBook = (e) => {
     if (!e.target.matches('.btn-remove')) return;
     const { index } = e.target.dataset;
     books.splice(index, 1);
