@@ -42,7 +42,7 @@ class UI {
           </div>`;
     }
     listSection.innerHTML = listHtml;
-    this.addRevomeEvents(); /* eslint-disable-line */
+    /* this.addRevomeEvents();  eslint-disable-line */
   }
 
   addBook = () => {
@@ -59,10 +59,18 @@ class UI {
     }
   };
 
-  removeBook = (e) => {
+  removeBook1 = (e) => {
     const titleToRemove = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
     const authorToRemove = e.currentTarget.previousElementSibling.textContent;
     books = books.filter((book) => book.title !== titleToRemove || book.author !== authorToRemove);
+    this.showList();
+    localStorage.setItem('books', JSON.stringify(books));
+  };
+
+  removeBook = (e)  => { 
+    if (!e.target.matches('.btn-remove')) return;
+    const { index } = e.target.dataset;
+    books.splice(index, 1);
     this.showList();
     localStorage.setItem('books', JSON.stringify(books));
   };
@@ -77,4 +85,5 @@ class UI {
 
 const objUI = new UI();
 addButton.addEventListener('click', objUI.addBook);
+listSection.addEventListener('click', objUI.removeBook);
 objUI.showList();
