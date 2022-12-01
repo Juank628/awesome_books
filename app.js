@@ -51,13 +51,16 @@ class UI {
       author: author.value,
     };
     books.push(newBook);
+    title.value = '';
+    author.value = '';
     this.showList();
     localStorage.setItem('books', JSON.stringify(books));
   };
 
   removeBook = (e) => {
     const titleToRemove = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
-    books = books.filter((book) => book.title !== titleToRemove);
+    const authorToRemove = e.currentTarget.previousElementSibling.textContent;
+    books = books.filter((book) => book.title !== titleToRemove || book.author !== authorToRemove );
     this.showList();
     localStorage.setItem('books', JSON.stringify(books));
   };
