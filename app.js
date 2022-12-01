@@ -60,7 +60,7 @@ class UI {
   removeBook = (e) => {
     const titleToRemove = e.currentTarget.previousElementSibling.previousElementSibling.textContent;
     const authorToRemove = e.currentTarget.previousElementSibling.textContent;
-    books = books.filter((book) => book.title !== titleToRemove || book.author !== authorToRemove );
+    books = books.filter((book) => book.title !== titleToRemove || book.author !== authorToRemove);
     this.showList();
     localStorage.setItem('books', JSON.stringify(books));
   };
